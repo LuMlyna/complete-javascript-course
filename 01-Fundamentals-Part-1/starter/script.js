@@ -212,6 +212,15 @@ if (favoriteNum !== 22) { // strict
 */
 
 //////////////////////////////////////////////////////
+// Boolean Logic
+const age = 16;
+if (age > 18 && age < 30) {
+    console.log("Person is an adult, but is younger than 30 years old!");
+} else if (age < 18 || age > 30) {
+    console.log("Person is younger than 18 or older than 30!");
+}
+
+//////////////////////////////////////////////////////
 // Assignment
 console.log("-----Assignment-----");
 const myCountry = "Slovakia";
