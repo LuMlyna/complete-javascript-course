@@ -158,10 +158,34 @@ console.log(n); // 10 as number
 
 let p = 2 + 3 + 4 + '5'; // 2 + 3 + 4 = 9 as number, '5' as string
 console.log(p); // '95' as string
-*/
+
 
 //////////////////////////////////////////////////////
 // Truthy and Falsy Values
+// 5 falsy values are: 0, '', undefined, null, NaN
+console.log(Boolean(0)); // -> false
+console.log(Boolean(undefined)); // -> false
+console.log(Boolean('John')); // -> true
+console.log(Boolean({})); // -> true
+console.log(Boolean('')); // -> false
+
+const money = 0;
+if (money) { // if its not boolean, JS use coercion and convert it to the boolean - in this case JS convert number to boolean
+    console.log(`Don't spend it all!`);
+} else {
+    console.log(`You should get a job!`);
+}
+
+let height;
+if (height) { // undefined is falsy value, so it is false
+    console.log(`YAY! Height is defined.`);
+} else {
+    console.log(`Height is UNDEFINED!`);
+}
+*/
+
+//////////////////////////////////////////////////////
+// Equality Operators
 
 
 //////////////////////////////////////////////////////
