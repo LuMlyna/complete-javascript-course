@@ -182,11 +182,34 @@ if (height) { // undefined is falsy value, so it is false
 } else {
     console.log(`Height is UNDEFINED!`);
 }
-*/
+
 
 //////////////////////////////////////////////////////
 // Equality Operators
+const age = 18;
+if (age === 18) console.log("You just became and adult! (strict)");
+if (age == 18) console.log("You just became and adult! (loose)");
 
+const favoriteNumStr = prompt("What is your favorite number?"); // result is string
+if (favoriteNumStr == 22) { // '22' == 22
+    console.log("Cool! 22 is great number!");
+}
+console.log(favoriteNumStr);
+
+const favoriteNum = Number(prompt("What is your favorite number?"));
+if (favoriteNumStr == 22) { // 22 === 22
+    console.log("Cool! 22 is great number!");
+} else if (favorite === 7) {
+    console.log("7 is also cool number.");
+} else {
+    console.log("Number is not 22 or 7!");
+}
+console.log(favoriteNum);
+
+if (favoriteNum !== 22) { // strict
+    console.log("Why not 22?")
+}
+*/
 
 //////////////////////////////////////////////////////
 // Assignment
@@ -228,3 +251,12 @@ console.log('19' - '13' + '17'); // -> '617' as string
 console.log('19' - '13' + 17); // -> 23 as number
 console.log('123' < 57); // -> false
 console.log(5 + 6 + '4' + 9 - 4 - 2); // -> 1143 as number
+
+const numNeighbours = Number(prompt("How many neighbour countries does your contry have?"));
+if (numNeighbours === 1) {
+    console.log("Only 1 border!");
+} else if (numNeighbours > 1) {
+    console.log(`${myCountry} has ${numNeighbours} borders!`);
+} else {
+    console.log("No borders :(");
+}
