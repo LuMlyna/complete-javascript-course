@@ -209,7 +209,7 @@ console.log(favoriteNum);
 if (favoriteNum !== 22) { // strict
     console.log("Why not 22?")
 }
-*/
+
 
 //////////////////////////////////////////////////////
 // Boolean Logic
@@ -220,6 +220,82 @@ if (age > 18 && age < 30) {
     console.log("Person is younger than 18 or older than 30!");
 }
 
+
+//////////////////////////////////////////////////////
+// Logic Operators
+const hasDriversLicense = true;
+const hasGoodVision = true;
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+const shouldDrive = hasDriversLicense && hasGoodVision;
+
+if (shouldDrive) {
+    console.log("Sarah is able to drive!");
+} else {
+    console.log("Someone else should drive ...");
+}
+
+const isTired = true;
+console.log(hasDriversLicense || hasGoodVision || isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log("Sarah is able to drive!");
+} else {
+    console.log("Someone else should drive ...");
+}
+
+
+//////////////////////////////////////////////////////
+// Switch Statement
+const day = "monday";
+
+switch (day) {
+    case "monday": // day === "monday" -> strict comparisson!
+        console.log('Plan course structure!');
+        console.log('Go to coding meetup');
+        break;
+    case "tuesday":
+        console.log('Prepare theory videos');
+        break;
+    case "wednesday":
+    case "thursday":
+        console.log('Write code examples');
+        break;
+    case "friday":
+        console.log('Record videos');
+        break;
+    case "saturday":
+    case "sunday":
+        console.log('Enjoy the weekend');
+        break;
+    default:
+        console.log('Not a valid day!');
+}
+
+// same logic as switch statement with if-else
+if (day === "monday") {
+    console.log('Plan course structure!');
+    console.log('Go to coding meetup');
+} else if (day === "tuesday") {
+    console.log('Prepare theory videos');
+} else if (day === "wednesday" || day === "thursday") {
+    console.log('Write code examples');
+} else if (day === "friday") {
+    console.log('Record videos');
+} else if (day === "saturday" || day === "sunday") {
+    console.log('Enjoy the weekend');
+} else {
+    console.log('Not a valid day!');
+}
+
+*/
+//////////////////////////////////////////////////////
+// Statements and Expressions
+
+
+
 //////////////////////////////////////////////////////
 // Assignment
 console.log("-----Assignment-----");
@@ -228,7 +304,7 @@ const myContinent = "Europe";
 let population = 125.43;
 const isIsland = false;
 const language = "slovak";
-
+/*
 const halfPopulation = population / 2;
 console.log(halfPopulation);
 
@@ -268,4 +344,33 @@ if (numNeighbours === 1) {
     console.log(`${myCountry} has ${numNeighbours} borders!`);
 } else {
     console.log("No borders :(");
+}
+
+if (language === "english" && population < 50 && !isIsland) {
+    console.log(`You should live in ${myCountry}! :)`);
+} else {
+    console.log(`${myCountry} does not meet your criteria :(`);
+}
+*/
+
+switch (language) {
+    case "chinese":
+    case "mandarin":
+        console.log('MOST number of native speakers!');
+        break;
+    case "spanish":
+        console.log('2nd place in number of native speakers');
+        break;
+    case "english":
+        console.log('3rd place');
+        break;
+    case "hindi":
+        console.log('Number 4');
+        break;
+    case "arabic":
+        console.log('5th most spoken language');
+        break;
+    default:
+        console.log('Great language too :D');
+        break;
 }
