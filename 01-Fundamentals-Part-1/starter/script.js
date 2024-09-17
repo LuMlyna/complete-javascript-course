@@ -290,18 +290,39 @@ if (day === "monday") {
     console.log('Not a valid day!');
 }
 
-*/
-//////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////// --> todo make notes to the notebook
 // Statements and Expressions
 
+expression - is piece of code that produces a value
+3 + 4
+1997
+true && false && !false
 
+statement - bigger piece of code that do not produce a value
+if-elsse
+switch
+if (23 > 10) {
+    const str = '23 is bigger';
+}
+
+
+//////////////////////////////////////////////////////
+// The Conditional (ternary) operator
+const age = 26;
+age >= 18 ? console.log('I like to drink wine') : console.log('I like to drink water');
+// an operator is expression
+
+const drink = age >= 18 ? ('wine') : ('water');
+console.log(drink);
+*/
 
 //////////////////////////////////////////////////////
 // Assignment
 console.log("-----Assignment-----");
 const myCountry = "Slovakia";
 const myContinent = "Europe";
-let population = 125.43;
+let population = 5.6;
 const isIsland = false;
 const language = "slovak";
 /*
@@ -351,7 +372,6 @@ if (language === "english" && population < 50 && !isIsland) {
 } else {
     console.log(`${myCountry} does not meet your criteria :(`);
 }
-*/
 
 switch (language) {
     case "chinese":
@@ -374,3 +394,6 @@ switch (language) {
         console.log('Great language too :D');
         break;
 }
+*/
+
+console.log(`${myCountry}'s population is ${population > 33 ? 'above' : 'below'} average`);
