@@ -291,7 +291,7 @@ if (day === "monday") {
 }
 
 
-////////////////////////////////////////////////////// --> todo make notes to the notebook
+////////////////////////////////////////////////////// 
 // Statements and Expressions
 
 expression - is piece of code that produces a value
