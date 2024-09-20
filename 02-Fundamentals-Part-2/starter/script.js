@@ -113,9 +113,80 @@ console.log(age1, age2, age3);
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 console.log(ages);
 
-*/
+
 //////////////////////////////////////////////////////
 // Array Operations
+const friends = ['Michael', 'Steven', 'Peter'];
+
+// Add elements
+const newLength = friends.push('Jay'); // mehod that attach new element at the end of the array
+console.log(friends);
+console.log(newLength); // 4
+
+friends.unshift('Harry'); // adding elemnets at the beggining of the array
+console.log(friends);
+
+// Remove elements
+const popped = friends.pop(); // remove last element from the array and return removed element
+console.log(popped);
+
+friends.shift(); // remove first element from the array
+console.log(friends);
+
+// Finding if the element is part of the array
+console.log(friends.indexOf('Steven')); // returning index of the element
+console.log(friends.indexOf('Bob')); // return -1
+
+console.log(friends.includes('Steven')); // return true or false, if the element is in the array
+console.log(friends.includes('Bob')); // return false
+
+
+//////////////////////////////////////////////////////
+// Objects
+const luArray = [
+    'Lu',
+    'Mlyna',
+    2024 - 1997,
+    'programmer',
+    ['John', 'Noah', 'Michael']
+];
+
+const lu = {
+    firstName: 'Lu',
+    lastName: 'Mlyna',
+    age: 2024 - 1997,
+    job: 'programmer',
+    friends: ['John', 'Noah', 'Michael']
+}; // this object has 5 properties
+console.log(lu);
+
+// Dot Operator (.) vs. Bracket Notation
+console.log(lu.lastName); // bodka objekt z array
+console.log(lu['lastName']); // [] bracket notation
+
+const nameKey = 'Name';
+console.log(lu['first' + nameKey]);
+console.log(lu['last' + nameKey]);
+
+const interestedIn = prompt('What do you want to know about Lu? Choose between firstName, lastName, age, job and friends');
+console.log(lu[interestedIn]); // musím použiť bracket notation, pretože interestedIn nie je súčasťou objektu a do zátvoriek môžeme dať akúkoľvek expression
+
+if (lu[interestedIn]) {
+    console.log(lu[interestedIn])
+} else {
+    console.log('Wrong request! Choose between firstName, lastName, age, job and friends');
+}
+
+lu.location = 'Slovakia';
+lu['instagram'] = '@lumlyna';
+console.log(lu);
+
+// Challenge
+console.log(`${lu.firstName} has ${lu.friends.length} friends, and her best friend is called ${lu.friends[0]}.`);
+
+*/
+//////////////////////////////////////////////////////
+// Object Methods
 
 
 
@@ -135,7 +206,7 @@ console.log(descFinlad);
  
 const descNorway = describeCountry('Norway', 5.5, 'Oslo');
 console.log(descNorway);
-*/
+
 
 function percentageOfWorld1(population) {
     return (population / 7900) * 100;
@@ -169,3 +240,28 @@ console.log(population.length == 4);
 const percentages = [percentageOfWorld2(population[0]), percentageOfWorld2(population[1]), percentageOfWorld2(population[2]), percentageOfWorld2(population[3])];
 console.log(percentages);
 
+const neighbours = ['Czechia', 'Poland', 'Hungary', 'Austria', 'Ukraine'];
+
+neighbours.push('Utopia');
+console.log(neighbours);
+
+neighbours.pop();
+console.log(neighbours);
+
+if (!neighbours.includes('Germany')) {
+    console.log('Probably not a central european country :D')
+};
+
+neighbours[neighbours.indexOf('Czechia')] = 'Czech Republic';
+console.log(neighbours);
+
+const myCountry = {
+    country: 'Slovakia',
+    capital: 'Bratislava',
+    language: 'slovak',
+    population: 5.4,
+    neighbours: ['Czech Republic', 'Poland', 'Hungary', 'Austria', 'Ukraine']
+};
+console.log(myCountry);
+
+*/
