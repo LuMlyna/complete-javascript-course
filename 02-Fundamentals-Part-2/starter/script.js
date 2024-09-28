@@ -184,11 +184,126 @@ console.log(lu);
 // Challenge
 console.log(`${lu.firstName} has ${lu.friends.length} friends, and her best friend is called ${lu.friends[0]}.`);
 
-*/
+
 //////////////////////////////////////////////////////
 // Object Methods
+const lu = {
+    firstName: 'Lu',
+    lastName: 'Mlyna',
+    birthYear: 1997,
+    job: 'programmer',
+    friends: ['John', 'Noah', 'Michael'],
+    hasDriversLicense: true,
+
+    // calcAge: function (birthYear) {
+    //     return 2024 - birthYear;
+    // }
+
+    // calcAge: function () {
+    //     console.log(this);
+    //     return 2024 - this.birthYear;
+    // }
+
+    calcAge: function () {
+        this.age = 2024 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and she has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`;
+    }
+};
+
+// console.log(lu.calcAge(lu.birthYear));
+// console.log(lu.calcAge());
+console.log(lu.calcAge());
+console.log(lu.getSummary());
 
 
+//////////////////////////////////////////////////////
+// Iteration: The For Loop
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep} 🏋️‍♂️.`);
+};
+
+// Loop in arrays
+const lu = [
+    'Lu',
+    'Mlyna',
+    2024 - 1997,
+    'programmer',
+    ['John', 'Noah', 'Michael']
+];
+
+const types = [];
+
+for (let i = 0; i < lu.length; i++) {
+    console.log(lu[i], typeof lu[i]);
+
+    // Filling new array
+    // types[i] = typeof lu[i];
+    types.push(typeof lu[i]);
+};
+console.log(types);
+
+const years = [1991, 2007, 1969, 1997, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2024 - years[i]);
+};
+console.log(ages);
+
+// continue and break
+console.log('-----ONLY STRINGS-----');
+for (let i = 0; i < lu.length; i++) {
+    if (typeof lu[i] !== 'string') {
+        continue;
+    }
+    console.log(lu[i], typeof lu[i]);
+};
+
+console.log('-----BREAK WITH NUMBER-----');
+for (let i = 0; i < lu.length; i++) {
+    if (typeof lu[i] === 'number') {
+        break;
+    }
+    console.log(lu[i], typeof lu[i]);
+};
+
+// Looping backwards
+for (let i = lu.length - 1; i >= 0; i--) {
+    console.log(i, lu[i]);
+};
+
+// Nested loops
+for (let e = 1; e <= 3; e++) {
+    console.log(`-----Starting excercise ${e}-----`);
+    for (let r = 1; r <= 5; r++) {
+        console.log(`-----Lifting weight repetition ${r} 🏋️‍♂️-----`);
+    }
+};
+
+
+//////////////////////////////////////////////////////
+// Iteration: The While Loop
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep} 🏋️‍♂️. (FOR LOOP)`);
+};
+
+let rep = 1;
+while (rep <= 10) {
+    console.log(`Lifting weights repetition ${rep} 🏋️‍♂️. (WHILE LOOP)`);
+    rep++;
+};
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+    console.log(`You rolled a ${dice} 🎲`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log(`You rolled a ${dice}. Congratulation! 🎉`);
+};
+*/
 
 //////////////////////////////////////////////////////
 // Assignment
@@ -260,8 +375,56 @@ const myCountry = {
     capital: 'Bratislava',
     language: 'slovak',
     population: 5.4,
-    neighbours: ['Czech Republic', 'Poland', 'Hungary', 'Austria', 'Ukraine']
+    neighbours: ['Czech Republic', 'Poland', 'Hungary', 'Austria', 'Ukraine'],
+
+    describe: function () {
+        return `${this.country} has ${this.population} million ${this['language']}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`;
+    },
+
+    isIsland: function () {
+        this.isIsland = this.neighbours.length === 0 ? true : false;
+        return this.isIsland;
+    }
 };
 console.log(myCountry);
+console.log(myCountry.isIsland());
 
+console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry['language']}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`);
+
+const increasedPopultaion = myCountry.population + 2;
+console.log(increasedPopultaion);
+
+const decreasedPopulation = myCountry['population'] - 2;
+console.log(decreasedPopulation);
+
+// For loops
+for (let i = 0; i <= 50; i++) {
+    console.log(`Voter number ${i} is currently voting 👌`);
+}
+
+const population = [1441, 5.4, 5.5, 332];
+for (let i = 0; i < population.length; i++) {
+    console.log((population[i] / 7900) * 100);
+}
+
+// Nested Loops
+const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+for (let i = 0; i < listOfNeighbours.length; i++) {
+    for (let y = 0; y < listOfNeighbours[i].length; y++) {
+        console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+    }
+};
+
+
+const percentages3 = [];
+const percentageOfWorld3 = population => (population / 7900) * 100;
+
+let i = 0;
+while (i < population.length) {
+    const perc = percentageOfWorld3(population[i]);
+    percentages3.push(perc);
+    i++;
+}
+
+console.log(percentages3);
 */
